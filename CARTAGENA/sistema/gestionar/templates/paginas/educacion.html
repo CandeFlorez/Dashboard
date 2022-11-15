@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+ {% block titulo %} Educacion  {% endblock %}
+
+ {% block contenido %}  
+<div class="table-responsive">
+    <table class="table table-primary">
+        <h4>Matricula escolar en Cartagena</h4>
+        <thead>
+            <tr>
+                <th scope="col">Año</th>
+                <th scope="col">Numeros de Matricula Escolar</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            {% for educacion in matriculaEscolar%}
+            <tr>
+                <td>{{ educacion.año }}</td>
+                <td>{{ educacion.numeroMatriculas}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        
+    </table>
+</div>
+
+ 
+ {% endblock %}
+    
